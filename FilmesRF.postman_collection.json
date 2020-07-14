@@ -1,0 +1,155 @@
+{
+	"info": {
+		"_postman_id": "bcdf6a2d-12bf-46a0-8511-078be04e1888",
+		"name": "FilmesRF",
+		"description": "Coleção para teste da API REST de filmes, desenvolvida utilizando Laravel.",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Adicionar",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Cookie",
+						"value": "",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "nome",
+							"value": "A Cidade",
+							"type": "text"
+						},
+						{
+							"key": "sinopse",
+							"value": "A cidade que não dorme.",
+							"type": "text"
+						},
+						{
+							"key": "diretor",
+							"value": "Carlos",
+							"type": "text"
+						},
+						{
+							"key": "atores",
+							"value": "Ana, Luiz, João Grilo",
+							"type": "text"
+						},
+						{
+							"key": "classificacao",
+							"value": "14 anos",
+							"type": "text"
+						},
+						{
+							"key": "date",
+							"value": "12 de junho de 2020",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:8000/filmes",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"filmes"
+					]
+				},
+				"description": "Rota configurada para a adição de filmes."
+			},
+			"response": []
+		},
+		{
+			"name": "Mostrar Filmes",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8000/filmes",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"filmes"
+					]
+				},
+				"description": "Essa é a rota que exibe todos os filmes cadastrados no banco de dados"
+			},
+			"response": []
+		},
+		{
+			"name": "Filme específico",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8000/filmes/6",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"filmes",
+						"6"
+					]
+				},
+				"description": "Essa rota mostra um filme específico."
+			},
+			"response": []
+		},
+		{
+			"name": "Editar",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "diretor",
+							"value": "Manuel",
+							"type": "text"
+						},
+						{
+							"key": "atores",
+							"value": "Rose, José, Alan",
+							"type": "text"
+						},
+						{
+							"key": "date",
+							"value": "25 de dezembro de 2020",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:8000/filmes/6",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"filmes",
+						"6"
+					]
+				},
+				"description": "Essa rota edita as informções do filme."
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}
