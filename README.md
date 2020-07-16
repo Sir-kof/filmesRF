@@ -5,6 +5,22 @@ O repositório tem a finalidade de executar o cadastro de filmes contendo inform
 É escrito utilizando o Laravel Framework alinhada com o banco de dados Mysql, portanto utiliza tecnologias como composer, symfony, csfr, etc.
 
 A aplicação é bem simples, utiliza a estrutura de um formulário para a adição e edição, e rotas GET com poucos parametros para consultas.
+### Conjunto chave/valor
+#### Filmes
+* key: nome, value: nome do filme.
+* key: sinopse, value: sinopse do filme.
+* key: diretor, value: diretor do filme.
+* key: atores, value: atores presentes no filme.
+* key: classificacao, value: classificação do filme.
+* key: date, value: data de lançamento do filme.
+
+#### Diretor
+* key: nome, value: nome do diretor.
+* key: idade, value: idade do diretor. *opcional
+
+#### Ator
+* key: nome, value: nome do ator.
+* key: idade, value: idade do ator. *opcional
 ### Passos para utilizar esse Repositório
 * Fazer o download do repositório.
 * Criar um banco de dados Mysql e configurar a conexão no arquivo .env que está na raiz do repositório.
